@@ -6,25 +6,6 @@ from utils.theBook import theBook
 from utils.handReader import handReader
 import matplotlib.pyplot as plt
 
-# creating the deck
-# deckValues = ['2','3','4','5','6','7','9','10','J','Q','K','A']
-# deckSuits = ['H','S','C','D']
-
-# deck = []
-# for suit in deckSuits:
-#     for value in deckValues:
-#         card = value + suit
-#         deck.append(card)
-
-# creating the stack
-# stack = []
-# for card in deck:
-#     for i in range(6):
-#         stack.append(card)
-
-# random.shuffle(stack)
-# print(stack)
-
 def create_shuffled_stack():
     deck_values = ['2','3','4','5','6','7','9','10','J','Q','K','A']
     deck_suits = ['H','S','C','D']
@@ -33,16 +14,10 @@ def create_shuffled_stack():
     random.shuffle(stack)
     return stack
 
-# playerWins = 0
-# dealerWins = 0
-# ties = 0
-
 # blackjack sim
-# round = 1
 rounds = []
 perctWins = []
-# stackLength = len(stack)
-# counter = 0
+
 for i in range(0, 100):
     stack = create_shuffled_stack()
     stackLength = len(stack)
@@ -123,10 +98,3 @@ plt.legend()
 
 # Display the plot
 plt.show()
-# plt.plot(rounds, perctWins)
-
-# plt.xlabel('Round of BJ (Stack of 6 Decks)')
-# plt.ylabel("'%' of Games Won (Each game about 50 rounds)")
-# plt.title('BlackJack Efficiency (BTB)')
-# plt.axhline(average)
-# plt.show()
